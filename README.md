@@ -1,5 +1,5 @@
 
-# ToDo-app
+# Task Manager app
 
 ## Technology Used 
 
