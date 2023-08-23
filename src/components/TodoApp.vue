@@ -1,7 +1,7 @@
 <template>
   <div class="container" style="max-width: 600px">
     <!-- heading start  -->
-    <h2 class="text-center mt-5">My Vue To-Do App</h2>
+    <h2 class="text-center mt-5">Task Manager App</h2>
 
     <form class="d-flex mt-5" @submit.prevent="addTask">
       <input
