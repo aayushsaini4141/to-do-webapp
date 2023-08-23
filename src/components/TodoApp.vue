@@ -67,16 +67,7 @@ export default{
     return{
       task:'',
       editedTask: null,
-      tasks: [
-        {
-          name: 'Steal bananas from the Store.',
-          status: 'to-do'
-        },
-        {
-          name: 'Eat 1kg chocolate in 1 hour',
-          status: 'done'
-        }
-      ],
+      tasks: JSON.parse(window.localStorage.getItem("tasks")),
       availableStatuses: ['to-do', 'done']
     }
   },
@@ -94,7 +85,7 @@ export default{
       this.editedTask = null;
        
     }
-     
+     window.localStorage.setItem('tasks', JSON.stringify(this.tasks))
     this.task = '';
     },
     
@@ -104,6 +95,7 @@ export default{
     },
     deleteTask(index){
       this.tasks.splice(index, 1);
+      window.localStorage.setItem('tasks', JSON.stringify(this.tasks))
     },
     changeStatus(index) {
       let newIndex = this.availableStatuses.indexOf(this.tasks[index].status);
